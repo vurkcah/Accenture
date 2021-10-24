@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accenture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        {% load static %}
+     <link href="{% static 'css/all.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+   <header>
+       <div class="header">
+           <a href="" ><img src="{% static 'img/logo.svg' %}" class="logo_img">
+           <a class="logo_text">Accenture</a>
+           </a>
+       
+            <nav>
+            <ul class="nav">
+                <li><a href="/kp">КПЭ</a></li>
+                <li><a href="/reg">Войти</a></li>
+            </ul>
+             </nav>
+       </div>
+   </header>
+   <div class="page">
+       <div class="wrap">
+          <h1 class="title-main">Erco Analytica.</h1> 
+          <p class="text-main">Система для работы с производственным планом промышленного предприятия.</p>
+          <ul class="nav2">
+              <li><a href="/zav">Сделать заказ</a></li>
+          </ul>
+       </div>
+   </div>
+    <div class="page page-top">
+        <div class="wrap">
+            <h2>НАША СИСТЕМА</h2>
+            <div class="services">
+               
+                <div class="services-item">
+                <div class="services_img"><img src="{% static 'img/icon1.svg' %}" alt=""></div>
+                <div class="services-text"> 
+                <h3>Приложение всегда с тобой</h3>
+                <p>Попробуйте наше мобильное приложение: такое же удобное и находящееся всегда под рукой.</p>
+                </div>
+                </div>
+          
+                <div class="services-item">
+                <div class="services_img"> <img src="{% static 'img/icon3.svg' %}" alt=""></div>
+                <div class="services-text"> 
+                <h3>Веб-приложение</h3>
+                <p>Accenture предлагает широкий спектр услуг на базе веб-сайта.</p>
+                </div>
+                </div>
+            
+
+                    <div class="services-item">
+                    <div class="services_img"> <img src="{% static 'img/icon2.svg' %}" alt=""></div>
+                    <div class="services-text"> 
+                    <h3>Реализация проекта</h3>
+                    <p>Мы предоставляем удобную среду для планирования и оптимизации производственных процесов.</p>
+                    </div>
+                    </div>
+               
+                 
+                
+                <div class="services-item">
+                <div class="services_img"><img src="{% static 'img/icon4.svg' %}" alt=""></div>
+                <div class="services-text"> 
+                <h3>Обеспечение качества</h3>
+                <p>Наша команда занимается постоянным улучшением качества и функции данного продукта.</p>
+                </div>
+             </div>
+
+            </div> 
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer">
+          <div class="wrap box-footer">
+             <a href="" ><img src="{% static 'img/logo.svg' %}" class="logo_img"></a>
+          </div> 
+        </div>
+    </footer>
+    <script defer src="{% static 'js/all.js' %}"></script>
+    
+</body>
+</html>

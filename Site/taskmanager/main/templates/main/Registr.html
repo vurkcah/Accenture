@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/Registr.css' %}">
+    <title>Форма регистрации</title>
+</head>
+<body>
+<div class="intro">
+<div class="video">
+<video class="video_media" src="{% static 'img/Weld%20-%2037071.mp4' %}" autoplay muted loop></video>
+</div>
+    </div>
+    
+ <main>
+     <div class="circle"></div>
+     <div class="register-form-container">
+         <h1 class="form-title">    
+             Регистрация
+         </h1>
+         <div class="form-feilds">
+             <div class="form-field">
+                 <input type="text" placeholder="Фамилия">
+             </div>
+             <div class="form-field">
+                 <input type="text" placeholder="Имя">
+             </div>
+             <div class="form-field">
+                 <input type="text" placeholder="Отчество (при наличии)">
+             </div>
+             <div class="form-field">
+                 <input type="text" placeholder="Дата рождения">
+             </div>
+             <div class="form-field">
+                 <input type="text" placeholder="Электронная почта">
+             </div> 
+              <div class="form-field">
+                 <input type="text" placeholder="Пароль">
+             </div> 
+              <div class="form-field">
+                 <input type="text" placeholder="Подтвердите пароль">
+             </div> 
+         </div>
+         <div class="form-buttons">
+             <a href="/" class="button">Регистрация</a>
+         </div>
+     </div>
+ </main> 
+
+</body>
+</html>

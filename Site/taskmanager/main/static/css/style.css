@@ -1,0 +1,205 @@
+body {
+    font-family: 'Ubuntu', sans-serif;   
+}
+
+.header {
+  
+    max-width: 3000px;
+    margin:  0 auto;
+    padding-left: 100px;
+    padding-right: 40px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+.footer {
+    padding-top: 55px;
+    padding-bottom: 45px;
+    background-color: #F7F7F7;
+}
+
+.wrap {
+   
+    max-width: 3000px;
+    margin:  0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+}
+
+.nav {
+    padding-left: 1200px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    background-color: #5528FF;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+
+}
+
+.nav>li {
+   margin-left: 25px;
+
+}
+.nav>li>a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav2 {
+    font-size: 24px;
+    background-color: #5528FF;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: 700;
+    border: none;
+    color: #fff;
+    max-width: 200px;
+    margin:  30 auto;
+    padding-left: 30px;
+    text-align: center;
+    display: flex;
+    text-decoration: none;
+    margin-left: 0;
+    list-style-type: none;
+        
+}
+
+.nav2>li>a {
+    text-decoration:none;
+    color: #fff;
+}
+.logo {
+    display: block;
+    align-items: left;
+    text-decoration:underline;
+}
+
+.logo_img {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+.logo_text {
+    position: fixed;
+    left: 10%;
+    font-size: 24px;
+    color:#202020;
+}
+
+.title-main {
+    font-size: 56px;
+    color:  #202020;
+    font-weight: 700;   
+}
+
+.text-main {
+    font-size: 32px;
+    color:#4F4F4F;
+    font-weight: ;
+    line-height: 1.5;
+
+}
+.nav_btn{
+    background-color: #5528FF;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+}
+.button {
+    background-color: #5528FF;
+    border-radius: 10px;
+    padding: 10px 45px;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+}
+.page{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+}
+.page-top{
+    border-top: 1px solid #c2c2c2;
+
+}
+
+.page h2 {
+    position: absolute;
+    top: -24px;
+    font-size: 14px;
+    font-weight: 300;
+    background-color: #fff;
+    padding: 5px 15px;
+    color: #C2C2C2;
+}
+
+.services {
+    display: grid;
+    grid-template: 50% 50% / 50% 50%;
+
+}
+
+.services-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.services_img {
+    flex-basis: 120px;
+    text-align: center;
+
+}
+.services-text {
+    flex-basis: calc(100% - 120px);
+}
+
+.services h3 {
+    font-size: 28px;
+    font-weight: 400;
+
+}
+
+.services p {
+    font-size: 14px;
+    color: #B2B2B2;
+    line-height: 1.5;
+
+
+}
+
+.social {
+    list-style-type: none;
+    padding-left: 0; 
+    display: flex;
+    
+}
+.social>li { 
+
+    margin-left: 15px; 
+}
+
+.social>li>a {
+    text-decoration: none;
+    color: #B2B2B2;
+    font-size: 24px;
+}
+.box-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}

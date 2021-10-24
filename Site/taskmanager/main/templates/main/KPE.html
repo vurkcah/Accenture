@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/KPE.css' %}">
+<body>
+    <header>
+        <div class="header">
+            <nav>
+                <ul class="nav">
+                    <li><a href="/" class="logo_texto">Accenture</a></li>
+                    <li><span> </span></li>
+                    <li><div class="side-button-1-wr">
+                        <label class="side-button-1" for="side-checkbox">
+                            <div class="side-b side-open">Открыть панель графиков</div>
+                            <div class="side-b side-close">Закрыть панель графиков</div>
+                        </label>
+                    </div></li>
+                    <li><a href="/kp" class="logo_textt">КПЭ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <form class="nav" action="{% url 'main:kp' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file"
+                   title="Upload excel file"
+                   name="excel_file"
+                   style="border: 1px solid black; padding: 5px;"
+                   required="required">
+            <p>
+            <input type="submit"
+                   value="Загрузить"
+                   style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+        </form>
+    <main>
+        <div>
+             <table cellspacing="2" border="1" cellpadding="3">
+                {% for r in th %}
+               <tr>
+                 {% for cell in r %}
+                  <th>{{ cell }}</th>
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in array %}
+               <tr>
+                 {% for value in row %}
+                   {% if value < 1 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 1 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == 'Заказы не прошедшие проверку на техническую исполнимость' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in str1 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value > 80 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 80 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == '% заполнения квот' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in str2 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value > 85 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 85 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == 'Загрузка оборудования' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in str3 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value > 90 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 90 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == 'Плановый OTIF' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in str4 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value < 15 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 15 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == 'Нарушение уровней запасов' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in str5 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value > 80 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 80 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == 'Загрузка кампаний' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in str6 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value > 80 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 80 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == 'Обязательный горячий посад, %' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in str7 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value < 90 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 90 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == 'Формирование и передача комбинаций' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in array1 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value > 80 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 80 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == 'Составление и передача серий' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in str8 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value < 70 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 70 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == 'Следование календарному плану' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in str9 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value < 70 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 70 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == 'Составление и передача монтажей' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in str10 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value < 70 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 70 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == 'Следование календарному плану' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in str11 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value > 80 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 80 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == 'Уровень резервирования' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in str12 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value < 50 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 50 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == '% составления ССЗ' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in str13 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value > 80 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 80 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == 'Уровень резервирования' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+
+                {% for row in str14 %}
+               <tr>
+                 {% for value in row %}
+                   {% if value > 80 %}
+                  <td style="background-color: #5cde50e5">{{ value }}%</td>
+                   {% elif value == 80 %}
+                  <td style="background-color: rgba(222,211,0,0.9)">{{ value }}%</td>
+                   {% elif value == '% составления заданий через контур системы' %}
+                   <td>{{ value }}</td>
+                   {% else %}
+                  <td style="background-color: #de5050e5">{{ value }}%</td>
+                   {% endif %}
+                 {% endfor %}
+               </tr>
+             {% endfor %}
+            </table>
+        </div>
+        <input type="checkbox" id="side-checkbox" />
+        <div class="side-panel">
+            <label class="side-button-2" for="side-checkbox">+</label>
+            <p class="side-title">Графики загрузки агрегатов</p>
+            <ul class="rmenu">
+                <li><a href="/kkco"><p class="logo_dis">Конвертеры КЦ-1</p></a></li>
+                <li><a href="/kkct"><p class="logo_dis">Конвертеры КЦ-2</p></a></li>
+                <li><a href="/kco"><p class="logo_dis">Конвертерный цех 1 УНРС 2,3,4,6</p></a></li>
+                <li><a href="/kct"><p class="logo_dis">Конвертерный цех 2 УНРС 5,6,7,8,9</p></a></li>
+                <li><a href="/stan2"><p class="logo_dis">Стан 2000 ЦГП</p></a></li>
+                <li><a href="/ntac"><p class="logo_dis">НТА ЦХПП</p></a></li>
+                <li><a href="/nta"><p class="logo_dis">НТА ЦДС</p></a></li>
+                <li><a href="/tk"><p class="logo_dis">Травильный комплекс ЦТС</p></a></li>
+                <li><a href="/stan1"><p class="logo_dis">Стан 1400 ЦДС</p></a></li>
+                <li><a href="/angctf"><p class="logo_dis">АНГЦ 2,4 ЦДС</p></a></li>
+                <li><a href="/stan3"><p class="logo_dis">Стан 2030 ЦХПП</p></a></li>
+                <li><a href="/rs"><p class="logo_dis">Реверсивный стан ЦДС</p></a></li>
+                <li><a href="/otgr"><p class="logo_dis">Отгрузка ЦГП</p></a></li>
+                <li><a href="/azp"><p class="logo_dis">АЗП ЦТС</p></a></li>
+                <li><a href="/angcchpp"><p class="logo_dis">АНГЦ ЦХПП</p></a></li>
+                <li><a href="/ano"><p class="logo_dis">АНО ЦХПП</p></a></li>
+            </ul>    
+        </div>
+    </main> 
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+    <title>График Стан 1400 ЦДС</title> 
+            {% load static %}
+</head>
+    <link rel="stylesheet" href="{% static 'css/Graphs.css' %}">
+<body>
+    <header>
+        <div class="header">
+            <nav>
+                <ul class="nav">
+                    <li><a href="/" class="logo_texto">Accenture</a></li>
+                    <li><span> </span></li>
+                    <li><a href="/kp" class="logo_textt">КПЭ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <canvas id="myChart" width="600" height="400"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="{% static 'js/STAN1400.js' %}"></script>
+</body>
+</html>
