@@ -38,6 +38,7 @@ pip install django
 Подключение локального сервера
 
 cd taskmaster
+
 python manage.py runserver
 
 Разработчики
